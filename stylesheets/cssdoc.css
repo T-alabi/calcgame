@@ -1,4 +1,43 @@
+/*NAV BAR STUFF*/
 #welcome{
   font-size: 30px;
   color: green;
+}
+#navLink{
+  padding: 15px;
+  padding-left: 30px;
+  color: green;
+  font-size: 25px;
+}
+#navLink:hover{
+  color: black;
+}
+/*HOME PAGE STUFF*/
+#background{
+  background-color: Black;
+  color: #006102;
+}
+#startButton{
+  padding: 20px;
+  background-color: white;
+  color: black;
+}
+#BeginText{
+  color: green
+  font-size: 20px;
+}
+#next{
+  float: right;
+}
+#NamePromt{
+  float: left;
+}
+/*GENERAL STUFF*/
+.center {
+  margin: auto;
+  width: 50%;
+  padding: 10px;
+}
+.hidden{
+  display: none
 }
