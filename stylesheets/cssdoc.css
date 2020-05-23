@@ -16,11 +16,17 @@
 #background{
   background-color: Black;
   color: #006102;
+  font-family: 'Fira Mono';font-size: 22px;
 }
 #startButton{
   padding: 20px;
   background-color: white;
   color: black;
+}
+#startlevel1{
+  padding: 50px;
+  color: green;
+  font-size: 25px;
 }
 #BeginText{
   color: green

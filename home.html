@@ -16,12 +16,14 @@
 
       <!-- javascript -->
       <script src="script.js"></script>
+      <!--FONT-->
+      <link href='https://fonts.googleapis.com/css?family=Fira Mono' rel='stylesheet'>
     </head>
 
       <div class="navbar navbar-expand-sm " style="background-color: #768a72;">
         <a href="home.html" class="text-decoration-none" id="welcome">Name here</a>
-        <a href="" id="navLink">Limits</a>
-        <a href="" id="navLink">derivatives</a>
+        <a href="Limits.html" id="navLink">Limits</a>
+        <a href="" id="navLink">Derivatives</a>
         <a href="" id="navLink">Integrals</a>
       </div>
 
@@ -33,15 +35,27 @@
           <button id="startButton" class="btn" onclick="typeWriter();">Start</button>
           <p id="BeginText" class="center w-25"></p>
 
-          <form  >
+          <button type="button" class="btn btn-primary" onclick="UserName()" id="next">Next</button>
+
+          <form >
             <div id="NamePromt" class="w-25 form-group hidden">
               <label for="firstName">First Name:</label>
                 <input type="name" class="form-control" id="firstName" placeholder="Name">
+                <button type="button" class="btn" id="subName" onclick="GetName()">Submit</button>
             </div>
           </form>
 
+          <p id="response">  </p>
+          <div class="hidden" id="next2">
+            <button type="button" class="btn btn-primary" onclick="showStart()" id="next2">Next</button>
+          </div>
+
+          <div class="hidden" id="startlevel1">
+            <!--MAKE BETTER LATER-->
+             <a href="Limits.html" id="startlevel1" class="button5" style="background-color:#768a72;">Start Level 1</a>
+          </div>
+
         </div>
-          <button type="submit" class="btn btn-primary" onclick="UserName()" id="next">Next</button>
         <script>
           var i = 0;
           var txt = 'There’s no time to explain, the secret secret service needs your help. We must solve a conspiracy but it’s all encrypted with calculus!! We need AP students like you to help us solve these problems, what should we call you?';
