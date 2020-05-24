@@ -12,6 +12,9 @@
 #navLink:hover{
   color: black;
 }
+.navbar{
+  margin-bottom: 25px;
+}
 /*HOME PAGE STUFF*/
 #background{
   background-color: Black;

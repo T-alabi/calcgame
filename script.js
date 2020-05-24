@@ -12,3 +12,11 @@ function showStart(){
   document.getElementById("startlevel1").style.display = "block";
   console.log("clicked");
 }
+function limq1check(){
+  console.log("check clicked");
+  if (document.getElementById("wrong1").checked){
+    document.getElementById("feedback1").innerHTML = "Correct, option 3 is not required";
+  }else if (document.getElementById("right1").checked || document.getElementById("right2").checked){
+    document.getElementById("feedback1").innerHTML = "Incorrect, Option 3 was correct";
+  }
+}

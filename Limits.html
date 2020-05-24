@@ -30,6 +30,53 @@
 
       <body id="background">
 
-  </body>
+        <div class="text-center">
+          <button type="button" id="limitstartButton" class="btn btn-primary" onclick="beginlev1()">Start Limits</button>
+          <p id="lev1"></p>
+            <p id="q1Stem" class="w-50"></p>
+        </div>
+
+        <!--QUESTION1 -->
+      <div id="LimQ1" class="hidden text-center form-group w-50">
+
+        <div class="custom-control custom-radio mb-3">
+          <input type="radio" class="custom-control-input" value="right1" id="right1" name="q1" />
+            <label class="custom-control-label" for="right1">INSERT ANSER 1 HERE</label>
+        </div>
+
+        <div class="custom-control custom-radio mb-3">
+          <input type="radio" class="custom-control-input" value="right2" id="right2" name="q1" />
+            <label class="custom-control-label" for="right2">INSERT ANSER 2 HERE</label>
+        </div>
+
+        <div class="custom-control custom-radio mb-3">
+          <input type="radio" class="custom-control-input" value="wrong1" id="wrong1" name="q1" />
+            <label class="custom-control-label" for="wrong1">INSERT ANSER 3 HERE</label>
+        </div>
+        <!--check-->
+        <button type="button" onclick="limq1check()">Check</button>
+        <p id="feedback1" ></p>
+      </div>
+
+      <script>
+        var i = 0;
+        var txt = 'Select the option that is NOT required for declaring continuity';
+        var speed = 30; /* The speed/duration of the effect in milliseconds */
+
+
+        function beginlev1() {
+          document.getElementById("lev1").innerHTML = "Get ready for Question 1 agent"
+        //  document.getElementById("limitstartButton").style.display = "none"
+          document.getElementById("LimQ1").style.display = "block";
+
+          if (i < txt.length) {
+            document.getElementById("q1Stem").innerHTML += txt.charAt(i);
+            i++;
+            setTimeout(beginlev1, speed)
+          }
+        }
+      </script>
+
+      </body>
 
   </html>
