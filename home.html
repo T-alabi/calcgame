@@ -15,28 +15,29 @@
       <link href="https://cdnjs.cloudflare.com/ajax/libs/mdbootstrap/4.12.0/css/mdb.min.css" rel="stylesheet">
 
       <!-- javascript -->
-      <script src="script.js"></script>
+      <script src="scripts\script.js"></script>
       <!--FONT-->
       <link href='https://fonts.googleapis.com/css?family=Fira Mono' rel='stylesheet'>
     </head>
 
-      <div class="navbar navbar-expand-sm " style="background-color: #768a72;">
-        <a href="home.html" class="text-decoration-none" id="welcome">Name here</a>
-        <a href="Limits.html" id="navLink">Limits</a>
-        <a href="" id="navLink">Derivatives</a>
-        <a href="" id="navLink">Integrals</a>
-      </div>
+    <!--HIDDEN NAV-->
+    <div id="replaceNav">
+      <script src="scripts\standards.js"></script>
+    </div>
 
       <body id="background">
 
         <h1 style="text-align:center; padding: 25px;">Welcome</h1>
         <h3  style="text-align:center"> To begin, press the button below</h3>
+
+        <!--BEGIN THE GAME AND WHATS YOUR NAME-->
         <div class="text-center">
           <button id="startButton" class="btn" onclick="typeWriter();">Start</button>
           <p id="BeginText" class="center w-50"></p>
 
           <button type="button" class="btn btn-primary" onclick="UserName()" id="next">Next</button>
 
+          <!--WHATS YOUR NAME FORM-->
           <form >
             <div id="NamePromt" class="w-25 form-group hidden">
               <label for="firstName">First Name:</label>
@@ -44,8 +45,9 @@
                 <button type="button" class="btn" id="subName" onclick="GetName()">Submit</button>
             </div>
           </form>
+            <p id="response">  </p>
 
-          <p id="response">  </p>
+            <!--SECOND NEXT BUTTON-->
           <div class="hidden" id="next2">
             <button type="button" class="btn btn-primary" onclick="showStart()" id="next2">Next</button>
           </div>
@@ -56,6 +58,8 @@
           </div>
 
         </div>
+        
+        <!-- TYPEWRITER FUNCTION-->
         <script>
           var i = 0;
           var txt = 'There’s no time to explain, the secret secret service needs your help. We must solve a conspiracy but it’s all encrypted with calculus!! We need AP students like you to help us solve these problems, what should we call you?';

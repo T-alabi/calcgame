@@ -1,11 +1,10 @@
 <!DOCTYPE html>
   <html>
     <head>
-
       <meta charset="utf-8" />
       <meta name="viewport" content="width=device-width, inital-scale=1" />
 
-      <title>Home</title>
+      <title>Limits</title>
       <!--[css]-->
       <link rel="stylesheet" type="text/css" href="stylesheets\cssdoc.css">
 
@@ -15,18 +14,16 @@
       <link href="https://cdnjs.cloudflare.com/ajax/libs/mdbootstrap/4.12.0/css/mdb.min.css" rel="stylesheet"/>
 
       <!--script-->
-      <script src="script.js"><data value=""></data></script>
+      <script src="scripts\script.js"><data value=""></data></script>
+
       <!--FONT-->
       <link href='https://fonts.googleapis.com/css?family=Fira Mono' rel='stylesheet'>
+
     </head>
 
-      <div class="navbar navbar-expand-sm " style="background-color: #768a72;">
-        <a href="home.html" class="text-decoration-none" id="welcome">Name here</a>
-        <a href="Limits.html" id="navLink">Limits</a>
-        <a href="" id="navLink">Derivatives</a>
-        <a href="" id="navLink">Integrals</a>
-      </div>
-
+          <div id="replaceNav">
+            <script src="scripts\standards.js"></script>
+          </div>
 
       <body id="background">
 
@@ -37,27 +34,33 @@
         </div>
 
         <!--QUESTION1 -->
+        <!--LIMIT QUESTION 1-->
       <div id="LimQ1" class="hidden text-center form-group w-50">
 
+        <!--option 1 -->
         <div class="custom-control custom-radio mb-3">
           <input type="radio" class="custom-control-input" value="right1" id="right1" name="q1" />
-            <label class="custom-control-label" for="right1">INSERT ANSER 1 HERE</label>
+            <label class="custom-control-label" for="right1">INSERT ANSWER 1 HERE</label>
         </div>
 
+        <!--option 2-->
         <div class="custom-control custom-radio mb-3">
           <input type="radio" class="custom-control-input" value="right2" id="right2" name="q1" />
-            <label class="custom-control-label" for="right2">INSERT ANSER 2 HERE</label>
+            <label class="custom-control-label" for="right2">INSERT ANSWER 2 HERE</label>
         </div>
 
+        <!--option 3-->
         <div class="custom-control custom-radio mb-3">
           <input type="radio" class="custom-control-input" value="wrong1" id="wrong1" name="q1" />
-            <label class="custom-control-label" for="wrong1">INSERT ANSER 3 HERE</label>
+            <label class="custom-control-label" for="wrong1">INSERT ANSWER 3 HERE</label>
         </div>
-        <!--check-->
+        
+        <!--CHECK QUESTION 1-->
         <button type="button" onclick="limq1check()">Check</button>
         <p id="feedback1" ></p>
       </div>
 
+      <!--TYPEWRITER FUNCTION FOR QUESTION 1-->
       <script>
         var i = 0;
         var txt = 'Select the option that is NOT required for declaring continuity';
