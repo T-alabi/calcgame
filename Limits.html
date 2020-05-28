@@ -30,34 +30,44 @@
         <div class="text-center">
           <button type="button" id="limitstartButton" class="btn btn-primary" onclick="beginlev1()">Start Limits</button>
           <p id="lev1"></p>
-            <p id="q1Stem" class="w-50"></p>
-        </div>
+            <p id="q1Stem" class="text-center"></p>
+
 
         <!--QUESTION1 -->
         <!--LIMIT QUESTION 1-->
-      <div id="LimQ1" class="hidden text-center form-group w-50">
+      <div id="LimQ1" class="hidden text-center form-group">
 
         <!--option 1 -->
         <div class="custom-control custom-radio mb-3">
-          <input type="radio" class="custom-control-input" value="right1" id="right1" name="q1" />
-            <label class="custom-control-label" for="right1">INSERT ANSWER 1 HERE</label>
+          <input type="radio" class=" w-50 custom-control-input" value="right1" id="right1" name="q1" />
+            <label class="w-50 custom-control-label" for="right1">The limit as x approaches c of f(x) is the same from the right and left side</label>
         </div>
 
         <!--option 2-->
         <div class="custom-control custom-radio mb-3">
           <input type="radio" class="custom-control-input" value="right2" id="right2" name="q1" />
-            <label class="custom-control-label" for="right2">INSERT ANSWER 2 HERE</label>
+            <label class="w-50 custom-control-label" for="right2">The function f(x) exists</label>
         </div>
 
         <!--option 3-->
         <div class="custom-control custom-radio mb-3">
           <input type="radio" class="custom-control-input" value="wrong1" id="wrong1" name="q1" />
-            <label class="custom-control-label" for="wrong1">INSERT ANSWER 3 HERE</label>
+            <label class="w-50 custom-control-label" for="wrong1">There is no domain defined</label>
         </div>
-        
+
         <!--CHECK QUESTION 1-->
         <button type="button" onclick="limq1check()">Check</button>
         <p id="feedback1" ></p>
+
+        <!--START QUESTION 2 -->
+        <button type="button" class="btn btn-primary" onclick="beginlimq2()" id="beginq2">Next Question</button>
+      </div>
+
+      <div id="Limq2" class="hidden text-center form-groups">
+        <p id="q2stem"></p>
+
+      </div>
+
       </div>
 
       <!--TYPEWRITER FUNCTION FOR QUESTION 1-->
@@ -69,7 +79,7 @@
 
         function beginlev1() {
           document.getElementById("lev1").innerHTML = "Get ready for Question 1 agent"
-        //  document.getElementById("limitstartButton").style.display = "none"
+          document.getElementById("limitstartButton").style.display = "none"
           document.getElementById("LimQ1").style.display = "block";
 
           if (i < txt.length) {
@@ -78,7 +88,26 @@
             setTimeout(beginlev1, speed)
           }
         }
+
+        /*
+        var q2i = 0;
+        var txtq2 = 'I hope you know your unit circle! Find the limit of 15sinx, as x approaches -pi / 2 divided by 30?';
+        var speed = 30;
+
+
+        function beginlev1() {
+          document.getElementById("beginq2").style.display = "none"
+          document.getElementById("Limq2").style.display = "block";
+
+          if (q2i < txtq2.length) {
+            document.getElementById("q2stem").innerHTML += txt.charAt(i);
+            i++;
+            setTimeout(beginlev1, speed)
+          }
+        }*/
       </script>
+
+      <!--QUESTION 2 TYPEWRITER-->
 
       </body>
 

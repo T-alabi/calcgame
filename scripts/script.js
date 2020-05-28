@@ -11,10 +11,15 @@ function GetName(){
 function showStart(){
   document.getElementById("startlevel1").style.display = "block";
 }
+/*LIMITS QUESTIONS*/
+/*QUESTION 1 */
 function limq1check(){
   if (document.getElementById("wrong1").checked){
-    document.getElementById("feedback1").innerHTML = "Correct, option 3 is not required";
-  }else if (document.getElementById("right1").checked || document.getElementById("right2").checked){
-    document.getElementById("feedback1").innerHTML = "Incorrect, Option 3 was correct";
+    document.getElementById("feedback1").innerHTML = "Correct, option 3 is not required. The first letter is C";
+  }else if (document.getElementById("right1").checked){
+    document.getElementById("feedback1").innerHTML = "Incorrect, the limit must be the same from both sides to prove continuity.Try again";
+  }else if (document.getElementById("right2").checked){
+    document.getElementById("feedback1").innerHTML = "Incorrect, the function must exist to prove continuity. Try again"
   }
 }
+/*QUESTION 2*/
