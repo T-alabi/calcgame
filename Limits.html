@@ -60,11 +60,30 @@
         <p id="feedback1" ></p>
 
         <!--START QUESTION 2 -->
-        <button type="button" class="btn btn-primary" onclick="beginlimq2()" id="beginq2">Next Question</button>
+        <button type="button" class="hidden" onclick="beginlimq2()" id="beginq2">Next Question</button>
       </div>
 
-      <div id="Limq2" class="hidden text-center form-groups">
+<!--QUESTION 2 GROUP-->
+      <div id="Limq2" class="hidden text-center form-group">
         <p id="q2stem"></p>
+
+        <!--option 1 WRONG-->
+        <div class="custom-control custom-radio mb-3">
+          <input type="radio" class="custom-control-input" value="wrong1" id="q2w1" />
+            <label class="w-50 custom-control-label" for="wrong1">option 1 here</label>
+        </div>
+
+        <!--option 2 RIGHT-->
+        <div class="custom-control custom-radio mb-3">
+          <input type="radio" class="custom-control-input" value="wrong1" id="q2r1" />
+            <label class="w-50 custom-control-label" for="wrong1">option 2 here</label>
+        </div>
+
+        <!--option 3 WRONG-->
+        <div class="custom-control custom-radio mb-3">
+          <input type="radio" class="custom-control-input" value="wrong1" id="q2w2" />
+            <label class="w-50 custom-control-label" for="wrong1">option 3 here</label>
+        </div>
 
       </div>
 
@@ -73,41 +92,25 @@
       <!--TYPEWRITER FUNCTION FOR QUESTION 1-->
       <script>
         var i = 0;
-        var txt = 'Select the option that is NOT required for declaring continuity';
+        var txt1 = 'Select the option that is NOT required for declaring continuity';
         var speed = 30; /* The speed/duration of the effect in milliseconds */
 
 
         function beginlev1() {
-          document.getElementById("lev1").innerHTML = "Get ready for Question 1 agent"
+          document.getElementById("lev1").innerHTML = "Get ready for the questions agent"
           document.getElementById("limitstartButton").style.display = "none"
           document.getElementById("LimQ1").style.display = "block";
 
-          if (i < txt.length) {
-            document.getElementById("q1Stem").innerHTML += txt.charAt(i);
+          if (i < txt1.length) {
+            document.getElementById("q1Stem").innerHTML += txt1.charAt(i);
             i++;
             setTimeout(beginlev1, speed)
           }
         }
 
-        /*
-        var q2i = 0;
-        var txtq2 = 'I hope you know your unit circle! Find the limit of 15sinx, as x approaches -pi / 2 divided by 30?';
-        var speed = 30;
 
-
-        function beginlev1() {
-          document.getElementById("beginq2").style.display = "none"
-          document.getElementById("Limq2").style.display = "block";
-
-          if (q2i < txtq2.length) {
-            document.getElementById("q2stem").innerHTML += txt.charAt(i);
-            i++;
-            setTimeout(beginlev1, speed)
-          }
-        }*/
       </script>
 
-      <!--QUESTION 2 TYPEWRITER-->
 
       </body>
 

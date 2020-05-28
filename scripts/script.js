@@ -21,5 +21,23 @@ function limq1check(){
   }else if (document.getElementById("right2").checked){
     document.getElementById("feedback1").innerHTML = "Incorrect, the function must exist to prove continuity. Try again"
   }
+  document.getElementById("beginq2").style.display = "block";
 }
 /*QUESTION 2*/
+var q2i = 0;
+var q2txt = 'I hope you know your unit circle! Find the limit of 15sinx, as x approaches -pi / 2 divided by 30?'
+var q2speed = 30;
+
+function beginlimq2(){
+  document.getElementById("LimQ1").style.display = "none";
+  document.getElementById("q1Stem").style.display = "none";
+  document.getElementById("Limq2").style.display = "block";
+// TYPEWRITER
+
+if (q2i < q2txt.length) {
+  document.getElementById("q2stem").innerHTML += q2txt.charAt(q2i);
+  q2i++;
+  setTimeout(beginlimq2, q2speed)
+}
+ }
+/**/
