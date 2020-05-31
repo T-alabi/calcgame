@@ -69,23 +69,61 @@
 
         <!--option 1 WRONG-->
         <div class="custom-control custom-radio mb-3">
-          <input type="radio" class="custom-control-input" value="wrong1" id="q2w1" />
-            <label class="w-50 custom-control-label" for="wrong1">option 1 here</label>
+          <input type="radio" class="custom-control-input" value="q2w1" id="q2w1" name="q2" />
+            <label class="w-50 custom-control-label" for="q2w1">-15</label>
         </div>
 
         <!--option 2 RIGHT-->
         <div class="custom-control custom-radio mb-3">
-          <input type="radio" class="custom-control-input" value="wrong1" id="q2r1" />
-            <label class="w-50 custom-control-label" for="wrong1">option 2 here</label>
+          <input type="radio" class="custom-control-input" value="q2r1" id="q2r1" name="q2" />
+            <label class="w-50 custom-control-label" for="q2r1">- ½</label>
         </div>
 
         <!--option 3 WRONG-->
         <div class="custom-control custom-radio mb-3">
-          <input type="radio" class="custom-control-input" value="wrong1" id="q2w2" />
-            <label class="w-50 custom-control-label" for="wrong1">option 3 here</label>
+          <input type="radio" class="custom-control-input" value="q2w2" id="q2w2" name="q2" />
+            <label class="w-50 custom-control-label" for="q2w2">½</label>
         </div>
 
+        <!--CHECK QUESTION 2-->
+        <button type="button" onclick="limq2check()">Check</button>
+        <p id="feedback2" ></p>
+
+        <!--START QUESTION 3 -->
+        <button type="button" class="hidden" onclick="beginlimq3()" id="beginq3">Next Question</button>
       </div>
+
+      <!--QUESTION 3 GROUP-->
+            <div id="Limq3" class="hidden text-center form-group">
+              <p id="q3stem"></p>
+
+              <!--option 1 RIGHT-->
+              <div class="custom-control custom-radio mb-3">
+                <input type="radio" class="custom-control-input" value="q3r1" id="q3r1" name="q3" />
+                  <label class="w-50 custom-control-label" for="q3r1">RIGHT ANSWER HERE</label>
+              </div>
+
+              <!--option 2 WRONG-->
+              <div class="custom-control custom-radio mb-3">
+                <input type="radio" class="custom-control-input" value="q3w1" id="q3w1" name="q3" />
+                  <label class="w-50 custom-control-label" for="q3w1">WRONG ANS HERE</label>
+              </div>
+
+              <!--option 3 WRONG-->
+              <div class="custom-control custom-radio mb-3">
+                <input type="radio" class="custom-control-input" value="q3w2" id="q3w2" name="q3" />
+                  <label class="w-50 custom-control-label" for="q3w2">WRONG ANS HERE TOO</label>
+              </div>
+
+              <!--CHECK QUESTION 2-->
+              <button type="button" onclick="limq3check()">Check</button>
+              <p id="feedback3" ></p>
+
+              <!--SHOULD BE VERIFY IT IS THE CIA 
+              <button type="button" class="hidden" onclick="beginlimq3()" id="beginq3">Next Question</button> -->
+            </div>
+
+
 
       </div>
 
