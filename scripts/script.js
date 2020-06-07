@@ -11,7 +11,24 @@ function GetName(){
 function showStart(){
   document.getElementById("startlevel1").style.display = "block";
 }
+
+var n = 0;
+var txtl = 'We need to find how deep this conspiracy runs, look at the problems below. Each correct answer will give you a letter of the government entity behind the conspiracy. At the end, enter the 3 letters into the prompt for your next mission. ';
+var speedl = 30;
 /*LIMITS QUESTIONS*/
+function startLimPage() {
+  document.getElementById("limitstartButton").style.display = "block";
+  document.getElementById("startlevel1").style.display = "none";
+//  document.getElementById("disHere").style.display = "block";
+
+  if (n < txtl.length) {
+    document.getElementById("disHere").innerHTML += txtl.charAt(n);
+    n++;
+    setTimeout(startLimPage, speedl)
+  }
+}
+
+
 /*QUESTION 1 CHECK */
 function limq1check(){
   if (document.getElementById("wrong1").checked){
@@ -73,11 +90,15 @@ if (q3i < q3txt.length) {
 //CHECK
 function limq3check(){
   if(document.getElementById("q3r1").checked){
-    document.getElementById("feedback3").innerHTML = "Correct message here";
+    document.getElementById("feedback3").innerHTML = "Correct, the limit will equal 5. The last letter is A";
+    document.getElementById("CIAcheck").style.display = "block";
   }else if (document.getElementById("q3w1").checked) {
-    document.getElementById("feedback3").innerHTML = "Wrong message here";
+    document.getElementById("feedback3").innerHTML = "incorrect, there is a numerical answer";
   }else if (document.getElementById("q3w2").checked){
-    document.getElementById("feedback3").innerHTML = "Wrong message here";
+    document.getElementById("feedback3").innerHTML = "incorrect, use L'Hopital's rule";
   }
-  //document.getElementById("beginq3").style.display = "block";
+}
+
+function getCIAname() {
+  if (document.getElementById("govName").value = )
 }

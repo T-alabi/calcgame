@@ -27,8 +27,17 @@
 
       <body id="background">
 
+        <div class="text-center" id="StartLimPage">
+          <!--MAKE BETTER LATER-->
+          <button type="button" onclick="startLimPage();" id="startlevel1" class="button5" style="background-color:#768a72;">Start Message</button>
+          <p id="disHere" class="text-center w-50" style="Padding-bottom: 25px;">
+
+          </p>
+        </div>
+
         <div class="text-center">
-          <button type="button" id="limitstartButton" class="btn btn-primary" onclick="beginlev1()">Start Limits</button>
+
+          <button type="button" id="limitstartButton" class="hidden btn btn-primary" onclick="beginlev1()">Start Limits</button>
           <p id="lev1"></p>
             <p id="q1Stem" class="text-center"></p>
 
@@ -100,27 +109,30 @@
               <!--option 1 RIGHT-->
               <div class="custom-control custom-radio mb-3">
                 <input type="radio" class="custom-control-input" value="q3r1" id="q3r1" name="q3" />
-                  <label class="w-50 custom-control-label" for="q3r1">RIGHT ANSWER HERE</label>
+                  <label class="w-50 custom-control-label" for="q3r1"> 5 </label>
               </div>
 
               <!--option 2 WRONG-->
               <div class="custom-control custom-radio mb-3">
                 <input type="radio" class="custom-control-input" value="q3w1" id="q3w1" name="q3" />
-                  <label class="w-50 custom-control-label" for="q3w1">WRONG ANS HERE</label>
+                  <label class="w-50 custom-control-label" for="q3w1"> undefined </label>
               </div>
 
               <!--option 3 WRONG-->
               <div class="custom-control custom-radio mb-3">
                 <input type="radio" class="custom-control-input" value="q3w2" id="q3w2" name="q3" />
-                  <label class="w-50 custom-control-label" for="q3w2">WRONG ANS HERE TOO</label>
+                  <label class="w-50 custom-control-label" for="q3w2"> infinity </label>
               </div>
 
               <!--CHECK QUESTION 2-->
               <button type="button" onclick="limq3check()">Check</button>
               <p id="feedback3" ></p>
 
-              <!--SHOULD BE VERIFY IT IS THE CIA 
-              <button type="button" class="hidden" onclick="beginlimq3()" id="beginq3">Next Question</button> -->
+              <div id="CIAcheck" class="hidden custom-control ">
+                <label for="govName">Enter your answer here:</label>
+                  <input type="name" class="form-control" id="govName" >
+                  <button type="button" class="btn" id="CIAname" onclick="getCIAname()">Check Answer</button>
+              </div>
             </div>
 
 
@@ -136,8 +148,9 @@
 
         function beginlev1() {
           document.getElementById("lev1").innerHTML = "Get ready for the questions agent"
-          document.getElementById("limitstartButton").style.display = "none"
           document.getElementById("LimQ1").style.display = "block";
+          document.getElementById("limitstartButton").style.display = "none"
+          document.getElementById("StartLimPage").style.display = "none";
 
           if (i < txt1.length) {
             document.getElementById("q1Stem").innerHTML += txt1.charAt(i);
