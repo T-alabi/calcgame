@@ -91,14 +91,24 @@ if (q3i < q3txt.length) {
 function limq3check(){
   if(document.getElementById("q3r1").checked){
     document.getElementById("feedback3").innerHTML = "Correct, the limit will equal 5. The last letter is A";
-    document.getElementById("CIAcheck").style.display = "block";
   }else if (document.getElementById("q3w1").checked) {
     document.getElementById("feedback3").innerHTML = "incorrect, there is a numerical answer";
   }else if (document.getElementById("q3w2").checked){
     document.getElementById("feedback3").innerHTML = "incorrect, use L'Hopital's rule";
   }
+  document.getElementById("Limq3").style.display = "none";
+  document.getElementById("q3stem").style.display = "none";
+document.getElementById("verifybutton").style.display = "block";
 }
 
 function getCIAname() {
-  if (document.getElementById("govName").value = )
+  document.getElementById("CIAcheck").style.display = "block";
+
+
+  var ans = document.getElementById("govName").value ;
+ if(ans === "CIA"){
+   document.getElementById("AnsMessage").innerHTML = "yeah message, change ";
+ }else if(ans != "cia"){
+   document.getElementById("AnsMessage").innerHTML = "no message, change";
+ }
 }

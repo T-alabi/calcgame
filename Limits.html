@@ -124,20 +124,26 @@
                   <label class="w-50 custom-control-label" for="q3w2"> infinity </label>
               </div>
 
-              <!--CHECK QUESTION 2-->
+              <!--CHECK QUESTION 3-->
               <button type="button" onclick="limq3check()">Check</button>
               <p id="feedback3" ></p>
 
-              <div id="CIAcheck" class="hidden custom-control ">
-                <label for="govName">Enter your answer here:</label>
-                  <input type="name" class="form-control" id="govName" >
-                  <button type="button" class="btn" id="CIAname" onclick="getCIAname()">Check Answer</button>
-              </div>
+            </div>
+            <div class="hidden" id="verifybutton">
+              <button type="button" class="hidden btn btn-primary" onclick="getCIAname()" >move on</button>
             </div>
 
-
-
       </div>
+
+        <div class="hidden" id="CIAcheck">
+          <div id="CIAcheck" class="hidden text-center custom-control ">
+            <label for="govName">Enter your answer here:</label>
+              <input type="name" class="form-control" id="govName" >
+              <button type="button" class="btn" id="CIAname" onclick="getCIAname()">Check Answer</button>
+              <p class="w-25" id="AnsMessage"></p>
+          </div>
+        </div>
+
 
       <!--TYPEWRITER FUNCTION FOR QUESTION 1-->
       <script>
