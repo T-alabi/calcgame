@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+  <html>
+    <head>
+
+      <meta charset="utf-8" />
+      <meta name="viewport" content="width=device-width, inital-scale=1" />
+
+      <title>Derivatives</title>
+      <!--[css]-->
+      <link rel="stylesheet" type="text/css" href="stylesheets\cssdoc.css">
+
+      <!--Bootstrap-->
+      <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" rel="stylesheet"/>
+      <!-- Material Design Bootstrap -->
+      <link href="https://cdnjs.cloudflare.com/ajax/libs/mdbootstrap/4.12.0/css/mdb.min.css" rel="stylesheet">
+
+      <!-- javascript -->
+      <script src="scripts\script.js"></script>
+      <!--FONT-->
+      <link href='https://fonts.googleapis.com/css?family=Fira Mono' rel='stylesheet'>
+    </head>
+
+    <!--HIDDEN NAV-->
+    <div id="replaceNav">
+      <script src="scripts\standards.js"></script>
+    </div>
+
+      <body id="background">
+
+        <!--HEADING AND SUB HEADING TEXT-->
+        <div id="DerTextSubtext">
+          <h1 style="text-align:center; padding: 25px;">Text</h1>
+          <h3  style="text-align:center; padding-bottom: 25px;"> Subheading text</h3>
+        </div>
+
+
+        <!--TYPEWRIER PARAGRAPH AND NEXT BUTTON-->
+        <div class= "text-center" id="startDerPage" style="padding: 35px;">
+          <button type="button" onclick="typeWriter();" id="startlevel1" class="button5" style="background-color:#768a72;">Start Message</button>
+          <p id="disHere" class="text-center w-50 center" style="Padding-bottom: 25px;"></p>
+          <button id="derivQuestionsId" class="btn btn-primary" type="button" onClick = derivQuestions();>Start Questions</button>
+        </div>
+
+
+        <!--QUESTION INSTRUCTIONS AND ALL QUESTIONS DIV HIDDEN UNTIL PRESSED-->
+        <div class="text-center hidden" id="allquestions">
+          <p id="derivInstructions">Dummy text</p>
+
+        </div>
+
+        <!-- TYPEWRITER FUNCTION-->
+        <script>
+          var i = 0;
+          var txt = 'Answer the following questions, then use the key terms given with each answer and type it into the “message decoder”. If you input the correct sequence of correct answer choices (no spaces and in the same order), the hidden message will be revealed! ';
+          var speed = 50;
+
+          function typeWriter() {
+            document.getElementById("DerTextSubtext").style.display = "none";
+            document.getElementById("startlevel1").style.display = "none";
+            if (i < txt.length) {
+              document.getElementById("disHere").innerHTML += txt.charAt(i);
+              i++;
+              setTimeout(typeWriter, speed);
+            }
+          }
+        </script>
+      </body>
+
+  </html>

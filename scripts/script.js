@@ -127,3 +127,10 @@ function getCIAname() {
    getansmessage.innerHTML = "The correct phrase was not entered, please try again";
  }
 }
+
+//DERIVATIVE PAGE STUFF
+//beginning text and show all QUESTIONS
+function derivQuestions() {
+  document.getElementById("allquestions").style.display = "block";
+  document.getElementById("derivQuestionsId").style.display = "none";
+}
