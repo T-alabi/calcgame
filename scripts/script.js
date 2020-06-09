@@ -1,12 +1,19 @@
+//clean this mess
 function UserName(){
-  document.getElementById("NamePromt").style.display = "block";
-document.getElementById("next").style.display = "none";
+  var getnamPromt = document.getElementById("NamePromt");
+  var getNext = document.getElementById("next");
+  getnamPromt.style.display = "block";
+  getNext.style.display = "none";
 }
 function GetName(){
   var name = document.getElementById("firstName").value;
-  document.getElementById("NamePromt").style.display = "none";
-  document.getElementById("response").innerHTML = "Welcome " + name + ", to the mission";
-  document.getElementById("next2").style.display = "block";
+  var getNamePrompt = document.getElementById("NamePromt");
+  var getResponse = document.getElementById("response");
+  var getNext2 = document.getElementById("next2");
+
+  getNamePrompt.style.display = "none";
+  getResponse.innerHTML = "Welcome " + name + ", to the mission";
+  getNext2.style.display = "block";
 }
 function showStart(){
   document.getElementById("startlevel1").style.display = "block";
@@ -17,6 +24,7 @@ var txtl = 'We need to find how deep this conspiracy runs, look at the problems 
 var speedl = 30;
 /*LIMITS QUESTIONS*/
 function startLimPage() {
+
   document.getElementById("limitstartButton").style.display = "block";
   document.getElementById("startlevel1").style.display = "none";
 //  document.getElementById("disHere").style.display = "block";
@@ -31,13 +39,15 @@ function startLimPage() {
 
 /*QUESTION 1 CHECK */
 function limq1check(){
+var getFeedback1 = document.getElementById("feedback1");
+
   if (document.getElementById("wrong1").checked){
-    document.getElementById("feedback1").innerHTML = "Correct, option 3 is not required. The first letter is C";
+    getFeedback1.innerHTML = "Correct, option 3 is not required. The first letter is C";
     document.getElementById("beginq2").style.display = "block";
   }else if (document.getElementById("right1").checked){
-    document.getElementById("feedback1").innerHTML = "Incorrect, the limit must be the same from both sides to prove continuity.Try again";
+    getFeedback1.innerHTML = "Incorrect, the limit must be the same from both sides to prove continuity.Try again";
   }else if (document.getElementById("right2").checked){
-    document.getElementById("feedback1").innerHTML = "Incorrect, the function must exist to prove continuity. Try again";
+    getFeedback1.innerHTML = "Incorrect, the function must exist to prove continuity. Try again";
   }
 }
 
@@ -60,13 +70,14 @@ if (q2i < q2txt.length) {
  }
 /*CHECK*/
 function limq2check(){
+  var getFeedback2 = document.getElementById("feedback2");
   if(document.getElementById("q2r1").checked){
-    document.getElementById("feedback2").innerHTML = "Correct again! You did remember your unit circle. The next letter is I ";
+    getFeedback2.innerHTML = "Correct again! You did remember your unit circle. The next letter is I ";
       document.getElementById("beginq3").style.display = "block";
   }else if (document.getElementById("q2w1").checked) {
-    document.getElementById("feedback2").innerHTML = "Wrong, don’t forget to divide by 30!";
+    getFeedback2.innerHTML = "Wrong, don’t forget to divide by 30!";
   }else if (document.getElementById("q2w2").checked){
-    document.getElementById("feedback2").innerHTML = "Wrong, you need to divide by positive 30";
+    getFeedback2.innerHTML = "Wrong, you need to divide by positive 30";
   }
 }
 
@@ -89,12 +100,14 @@ if (q3i < q3txt.length) {
  }
 //CHECK
 function limq3check(){
+var getFeedback3 = document.getElementById("feedback3");
+
   if(document.getElementById("q3r1").checked){
-    document.getElementById("feedback3").innerHTML = "Correct, the limit will equal 5. The last letter is A";
+    getFeedback3.innerHTML = "Correct, the limit will equal 5. The last letter is A";
   }else if (document.getElementById("q3w1").checked) {
-    document.getElementById("feedback3").innerHTML = "incorrect, there is a numerical answer";
+    getFeedback3.innerHTML = "incorrect, there is a numerical answer";
   }else if (document.getElementById("q3w2").checked){
-    document.getElementById("feedback3").innerHTML = "incorrect, use L'Hopital's rule";
+    getFeedback3.innerHTML = "incorrect, use L'Hopital's rule";
   }
   document.getElementById("Limq3").style.display = "none";
   document.getElementById("q3stem").style.display = "none";
@@ -103,12 +116,14 @@ document.getElementById("verifybutton").style.display = "block";
 
 function getCIAname() {
   document.getElementById("CIAcheck").style.display = "block";
-
-
+  var moveDerivative = document.getElementById("goToDerivative");
   var ans = document.getElementById("govName").value ;
+  var getansmessage = document.getElementById("AnsMessage");
+
  if(ans === "CIA"){
-   document.getElementById("AnsMessage").innerHTML = "yeah message, change ";
+   getansmessage.innerHTML = "Good job! Now that we know the CIA is the one behind this, we can find out what they’re hiding. Get ready for derivatives.  ";
+   moveDerivative.style.display = "block";
  }else if(ans != "cia"){
-   document.getElementById("AnsMessage").innerHTML = "no message, change";
+   getansmessage.innerHTML = "The correct phrase was not entered, please try again";
  }
 }
