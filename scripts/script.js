@@ -25,9 +25,9 @@ var speedl = 30;
 /*LIMITS QUESTIONS*/
 function startLimPage() {
 
+  document.getElementById("limTextSubtext").style.display = "none";
   document.getElementById("limitstartButton").style.display = "block";
   document.getElementById("startlevel1").style.display = "none";
-//  document.getElementById("disHere").style.display = "block";
 
   if (n < txtl.length) {
     document.getElementById("disHere").innerHTML += txtl.charAt(n);
@@ -54,7 +54,7 @@ var getFeedback1 = document.getElementById("feedback1");
 /*QUESTION 2*/
 var q2i = 0;
 var q2txt = 'I hope you know your unit circle! Find the limit of 15sinx, as x approaches -pi / 2 divided by 30?'
-var q2speed = 30;
+var q2speed = 40;
 
 function beginlimq2(){
   document.getElementById("LimQ1").style.display = "none";
@@ -83,7 +83,7 @@ function limq2check(){
 
 /*QUESTION 3*/
 var q3i = 0;
-var q3txt = 'Pretend there is a limit question here and move on. thanks'
+var q3txt = 'As the function of 5x - 100/x approaches infinity, what does the limit equal'
 var q3speed = 30;
 
 function beginlimq3(){
@@ -133,4 +133,5 @@ function getCIAname() {
 function derivQuestions() {
   document.getElementById("allquestions").style.display = "block";
   document.getElementById("derivQuestionsId").style.display = "none";
+  document.getElementById("disHere").style.display = "none";
 }
