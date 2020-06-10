@@ -53,7 +53,7 @@ var getFeedback1 = document.getElementById("feedback1");
 
 /*QUESTION 2*/
 var q2i = 0;
-var q2txt = 'I hope you know your unit circle! Find the limit of 15sinx, as x approaches -pi / 2 divided by 30?'
+var q2txt = 'I hope you know your unit circle! Find the limit of 15sinx, as x approaches -π / 2 divided by 30?'
 var q2speed = 40;
 
 function beginlimq2(){
@@ -135,3 +135,74 @@ function derivQuestions() {
   document.getElementById("derivQuestionsId").style.display = "none";
   document.getElementById("disHere").style.display = "none";
 }
+//CHECK SEQUENCE
+function CheckSequence() {
+  var inputSequence = document.getElementById("sequence").value;
+  var getsequenceFeedback = document.getElementById("sequenceFeedback");
+
+  if(inputSequence === "ACAC"){
+    getsequenceFeedback.innerHTML = "you got it right!, press the next button for the secret message";
+    document.getElementById("decodeMessage").style.display = "block";
+    //MAKE ELSE IF, FOR ANY OF THE QUESTIONS WRONG, NO HINTS
+  }else if(inputSequence != "ACAC"){
+    getsequenceFeedback.innerHTML = "incorrect, try again"
+  }
+}
+
+function checkDerivQs() {
+  document.getElementById("optionalderivCheck").style.display = "block";
+
+  var getFeedbackderiv = document.getElementById("derivFeedback");
+  var getFeedbackderiv2 = document.getElementById("derivFeedback2");
+  var getFeedbackderiv3 = document.getElementById("derivFeedback3");
+  var getFeedbackderiv4 = document.getElementById("derivFeedback4");
+
+  var getdright1 = document.getElementById("dright1");
+  var getdright2 = document.getElementById("dright2");
+  var getdright3 = document.getElementById("dright3");
+  var getdright4 = document.getElementById("dright4");
+
+//checks q1
+  if(getdright1.checked){
+    getFeedbackderiv.innerHTML = "Number 1 is correct!"
+  }else if(getdright1.value != getdright1.checked ){
+    getFeedbackderiv.innerHTML = "Number 1 is incorrect. Try again"
+  }
+//checks q2
+if(getdright2.checked){
+  getFeedbackderiv2.innerHTML = "Number 2 is correct!"
+}else if(getdright2.value != getdright2.checked ){
+  getFeedbackderiv2.innerHTML = "Number 2 is incorrect. Try again"
+}
+//checked q3
+if(getdright3.checked){
+  getFeedbackderiv3.innerHTML = "Number 3 is correct!"
+}else if(getdright3.value != getdright3.checked ){
+  getFeedbackderiv3.innerHTML = "Number 3 is incorrect. Try again"
+}
+//checked q4
+if(getdright4.checked){
+  getFeedbackderiv4.innerHTML = "Number 4 is correct!"
+}else if(getdright4.value != getdright4.checked ){
+  getFeedbackderiv4.innerHTML = "Number 4 is incorrect. Try again"
+}
+
+}
+//DECODE ABOVE MESSAGE
+var q4i = 0;
+var q4txt = 'Non-human intelligent life. It has been hidden from you for decades, generations even. Recently released. They are above you, below you, around you, next to you. Watch out for the ones with white hair. '
+var q4speed = 30;
+
+function seqMessage(){
+ document.getElementById("sequence").style.display = "none";
+ document.getElementById("subSequence").style.display = "none";
+ document.getElementById("sequenceLabel").style.display = "none";
+ document.getElementById("sequenceFeedback").style.display = "none";
+// TYPEWRITER
+
+if (q4i < q4txt.length) {
+  document.getElementById("decodeMessage").innerHTML += q4txt.charAt(q4i);
+  q4i++;
+  setTimeout(seqMessage, q4speed)
+}
+ }
