@@ -27,5 +27,135 @@
 
       <body id="background">
 
+        <!--HEADING AND SUB HEADING TEXT-->
+        <div id="DerTextSubtext">
+          <h1 style="text-align:center; padding: 25px;">Level 3 </h1>
+          <h3  style="text-align:center; padding-bottom: 25px;"> All about integral concepts</h3>
+        </div>
+
+        <!--TYPEWRIER PARAGRAPH AND NEXT BUTTON-->
+        <div class= "text-center" id="startIntPage" style="padding: 35px;">
+          <button type="button" onclick="typeWriter();" id="startlevel1" class="button5" style="background-color:#768a72;">Start Message</button>
+          <p id="disHere" class="text-center w-50 center" style="Padding-bottom: 25px;"></p>
+          <button id="IntQuestionsId" class="btn btn-primary" type="button" onClick = IntQuestions();>Start Questions</button>
+        </div>
+
+        <div class="text-center hidden" id="allquestions">
+
+          <!--QUESTION 1 -->
+          <div style="padding-bottom: 50px;">
+            <p>1.		How do you find the total distance of a particle using an integral?</p>
+            <!--option 1 -->
+            <div class="custom-control custom-radio mb-3">
+              <input type="radio" class=" w-50 custom-control-input" value="dwrong1" id="dwrong1" name="q1" />
+                <label class="w-50 custom-control-label" for="dwrong1">A.  The integral already finds the total distance </label>
+            </div>
+            <!--option 2 -->
+            <div class="custom-control custom-radio mb-3">
+              <input type="radio" class=" w-50 custom-control-input"  value="dright1" id="dright1" name="q1" />
+                <label class="w-50 custom-control-label" for="dright1">B. Put the function in absolute value bars ( |f(x)| )</label><!--correct-->
+            </div>
+            <!--option 3-->
+            <div class="custom-control custom-radio mb-3">
+              <input type="radio" class=" w-50 custom-control-input" value="dwrong2" id="dwrong2" name="q1" />
+                <label class="w-50 custom-control-label" for="dwrong2">C. Multiply the function by 5 </label>
+            </div>
+        </div>
+
+        <!--QUESTION 2-->
+        <div style="padding-bottom: 50px;">
+          <p> 2. 		According to the fundamental theorem of calculus, <span>&#8747;</span> f’(x) is equal to which of the following?</p>
+          <!--option 1 -->
+          <div class="custom-control custom-radio mb-3">
+            <input type="radio" class=" w-50 custom-control-input"  value="dright2" id="dright2" name="q2" /> <!--correct-->
+              <label class="w-50 custom-control-label" for="dright2">A. F(b) - F(a) / b-a  </label>
+          </div>
+          <!--option 2 -->
+          <div class="custom-control custom-radio mb-3">
+            <input type="radio" class=" w-50 custom-control-input" value="dwrong3" id="dwrong3" name="q2" />
+              <label class="w-50 custom-control-label" for="dwrong3">B. F(a) - F(b) / a-b </label>
+          </div>
+          <!--option 3-->
+          <div class="custom-control custom-radio mb-3">
+            <input type="radio" class=" w-50 custom-control-input" value="dwrong4" id="dwrong4"  name="q2" />
+              <label class="w-50 custom-control-label" for="dwrong4">C. Slope  </label>
+          </div>
+      </div>
+
+      <!--QUESTION 3-->
+      <div style="padding-bottom: 50px;">
+        <p>3. 		 Find the indefinite integral <span>&#8747;</span> x<span>&#178;</span> </p>
+        <!--option 1 -->
+        <div class="custom-control custom-radio mb-3">
+          <input type="radio" class=" w-50 custom-control-input" value="dwrong7" id="dwrong7" name="q3" />
+            <label class="w-50 custom-control-label" for="dwrong7">A. x<sub>3</sub>  </label>
+        </div>
+        <!--option 2 -->
+        <div class="custom-control custom-radio mb-3">
+          <input type="radio" class=" w-50 custom-control-input" value="dwrong6" id="dwrong6" name="q3" />
+            <label class="w-50 custom-control-label" for="dwrong6">B. x<sub>3</sub> / 2 </label>
+        </div>
+        <!--option 3-->
+        <div class="custom-control custom-radio mb-3">
+          <input type="radio" class=" w-50 custom-control-input"  value="dright3" id="dright3" name="q3" /> <!--correct-->
+            <label class="w-50 custom-control-label" for="dright3">C. x<sub>3</sub> / 3  </label>
+        </div>
+    </div>
+
+    <!--QUESTION 4-->
+    <div style="padding-bottom: 50px;">
+      <p> 4.  	on interval [0,0], what is the definite integral of Cos(x)Arccot(x) ?</p>
+      <!--option 1 -->
+      <div class="custom-control custom-radio mb-3">
+        <input type="radio" class=" w-50 custom-control-input" value="dright4" id="dright4" name="q4" /> <!--correct-->
+          <label class="w-50 custom-control-label" for="dright4">A. 0  </label>
+      </div>
+      <!--option 2 -->
+      <div class="custom-control custom-radio mb-3">
+        <input type="radio" class=" w-50 custom-control-input" value="dwrong9" id="dwrong9" name="q4" />
+          <label class="w-50 custom-control-label" for="dwrong9">B. π  </label>
+      </div>
+      <!--option 3-->
+      <div class="custom-control custom-radio mb-3">
+        <input type="radio" class=" w-50 custom-control-input" value="dwrong10" id="dwrong10" name="q4" />
+          <label class="w-50 custom-control-label" for="dwrong10">C. Not enough information </label>
+      </div>
+    </div>
+
+    <!--CHECK QUESTIONS-->
+    <p > Check the questions, and reveal the CIA secrets</p> <br />
+    <button class="btn btn-primary" style="padding-bottom: 15px;" onClick="checkIntQs();">Check Questions</button> <br /><br /><br />
+
+    <div class="hidden center w-50" id="optionalIntCheck">
+      <p id="IntFeedback"> <p/> <br />
+        <p id="IntFeedback2"> <p/> <br />
+          <p id="IntFeedback3"> <p/> <br />
+            <p id="IntFeedback4"> <p/> <br />
+    </div>
+
+    <div id="endGame" class="text-center hidden" style="font-size: 35px;">
+      <p>
+        Thank you for playing <i>Operation Calc</i> <br />
+        the mission has just begun
+      </p>
+    </div>
+        </div>
+
+        <!-- TYPEWRITER FUNCTION-->
+        <script>
+          var i = 0;
+          var txt = 'For the last level, for now, you will solve the 4 following questions, and learn 4 different CIA secrets that have been kept away from the general public, and buried in their archives. Complete them if you dare. ';
+          var speed = 60;
+
+          function typeWriter() {
+            document.getElementById("DerTextSubtext").style.display = "none";
+            document.getElementById("startlevel1").style.display = "none";
+            if (i < txt.length) {
+              document.getElementById("disHere").innerHTML += txt.charAt(i);
+              i++;
+              setTimeout(typeWriter, speed);
+            }
+          }
+        </script>
       </body>
   </html>

@@ -206,3 +206,53 @@ if (q4i < q4txt.length) {
   setTimeout(seqMessage, q4speed)
 }
  }
+
+ //INTEGRAL PAGE STUFF
+ function IntQuestions() {
+   document.getElementById("allquestions").style.display = "block";
+   document.getElementById("IntQuestionsId").style.display = "none";
+   document.getElementById("disHere").style.display = "none";
+ }
+
+//check the intergral Qs
+ function checkIntQs() {
+   document.getElementById("optionalIntCheck").style.display = "block";
+
+   var getFeedbackInt = document.getElementById("IntFeedback");
+   var getFeedbackInt2 = document.getElementById("IntFeedback2");
+   var getFeedbackInt3 = document.getElementById("IntFeedback3");
+   var getFeedbackInt4 = document.getElementById("IntFeedback4");
+
+   var getIright1 = document.getElementById("dright1");
+   var getIright2 = document.getElementById("dright2");
+   var getIright3 = document.getElementById("dright3");
+   var getIright4 = document.getElementById("dright4");
+
+ //checks q1
+   if(getIright1.checked){
+     getFeedbackInt.innerHTML = "Number 1 is correct!" + " In 1983, the CIA filed a request demanding the US Air Force deliver the remains of non-human (alien) life, to the CIA immediately"
+   }else if(getIright1.value != getIright1.checked ){
+     getFeedbackInt.innerHTML = "Number 1 is incorrect. Try again"
+   }
+ //checks q2
+ if(getIright2.checked){
+   getFeedbackInt2.innerHTML = "Number 2 is correct!" + " Some time before the 1950’s, German scientists sighted multiple “flying disks”, that were in no way mistakable for any aircraft known to man at the time. At the time it was believed to belong to the Russians, but they too were amiss about its origins "
+ }else if(getIright2.value != getIright2.checked ){
+   getFeedbackInt2.innerHTML = "Number 2 is incorrect. Try again"
+ }
+ //checked q3
+ if(getIright3.checked){
+   getFeedbackInt3.innerHTML = "Number 3 is correct!" + " In the Soviet Union in 1952, a comet changed from dark red, to green and then to white before crashing into an unpopulated and unknown location. The comet, its remains, or the mark of the comet landing were never recovered. "
+ }else if(getIright3.value != getIright3.checked ){
+   getFeedbackInt3.innerHTML = "Number 3 is incorrect. Try again"
+ }
+ //checked q4
+ if(getIright4.checked){
+   getFeedbackInt4.innerHTML = "Number 4 is correct!" + " Not really a secret, but the CIA periodically releases previously classified documents from past endeavours into its public archive. These documents vary from the outrageous experiments to thwarted attacks. "
+   document.getElementById("endGame").style.display = "block";
+ }else if(getIright4.value != getIright4.checked ){
+   getFeedbackInt4.innerHTML = "Number 4 is incorrect. Try again"
+ }
+
+
+ }
