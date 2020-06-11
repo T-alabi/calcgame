@@ -109,7 +109,6 @@ var getFeedback3 = document.getElementById("feedback3");
   }else if (document.getElementById("q3w2").checked){
     getFeedback3.innerHTML = "incorrect, use L'Hopital's rule";
   }
-  document.getElementById("Limq3").style.display = "none";
   document.getElementById("q3stem").style.display = "none";
 document.getElementById("verifybutton").style.display = "block";
 }
@@ -190,7 +189,7 @@ if(getdright4.checked){
 }
 //DECODE ABOVE MESSAGE
 var q4i = 0;
-var q4txt = 'Non-human intelligent life. It has been hidden from you for decades, generations even. Recently released. They are above you, below you, around you, next to you. Watch out for the ones with white hair. '
+var q4txt = 'Non-human intelligent life. It has been hidden from you for decades, generations even. Recently released, the files specify they are above you, below you, around you, next to you. Watch out for the ones with white hair. '
 var q4speed = 30;
 
 function seqMessage(){
